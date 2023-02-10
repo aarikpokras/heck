@@ -7,6 +7,6 @@ You have to run it with `sudo` for effect. It will not run wuthout sudo. You can
 
 ## Installation
 You can run it as a command by running the installation script:
-```
+```bash
 /bin/bash -c "$(curl https://raw.githubusercontent.com/aarikpokras/heck/main/install.sh)"
 ```
