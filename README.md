@@ -1,5 +1,5 @@
 # heck
-A delightful program that lets you heck anyone! (Not actually)
+A *delightful* program that lets you heck anyone! (Not actually)
 <br />Inspired by beluga
 
 ## Stuff you should know about
