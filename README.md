@@ -10,3 +10,4 @@ You can run it as a command by running the installation script:
 ```bash
 /bin/bash -c "$(curl https://raw.githubusercontent.com/aarikpokras/heck/main/install.sh)"
 ```
+Then run `heck`.
