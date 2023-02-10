@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ "$2" == "--glitch-computer" ];then OTHER_OPTIONS="Glitching computer...";else printf "";fi
+if [ "$2" == "--glitch-computer" ];then OTHER_OPTIONS="\033[0m[ SuperHeck Console ]: \033[1;31mGlitching computer...";else printf "";fi
 if [ $EUID -ne 0 ];then echo Bruh be sudo.;else
 if [ -z $1 ];then echo Who to heck?; else
 printf "\033[0m[ SuperHeck Console ]: \033[1;32mHecking $1..."
