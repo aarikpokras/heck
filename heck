@@ -2,7 +2,8 @@
 if [ "$2" == "--glitch-computer" ];then OTHER_OPTIONS="\033[0m[ SuperHeck Console ]: \033[1;31mGlitching computer...";else printf "";fi
 if [ $EUID -ne 0 ];then echo Bruh be sudo.;else
 if [ -z $1 ];then echo Who to heck?; else
-printf "\033[0m[ SuperHeck Console ]: \033[1;32mHecking $1..."
+FULLNAME=$(echo $1 | sed 's/./\ /g')
+printf "\033[0m[ SuperHeck Console ]: \033[1;32mHecking $FULLNAME..."
 sleep 1
 printf "Done.\n\033[0m[ SuperHeck Console ]: \033[1;31mInside computer...\n"
 if [ -n "$OTHER_OPTIONS" ];then sleep 0.5; IFDON='Done.\n';else printf "";fi
@@ -10,7 +11,7 @@ printf "$OTHER_OPTIONS"
 sleep 0.5
 printf "$IFDON\033[0m[ SuperHeck Console ]: \033[1;31mSearching files...\033[1;32m"
 sleep 1
-printf "Done.\n$1's files:\n"
+printf "Done.\n$FULLNAME's files:\n"
 sleep 0.5;printf "┌─────────┐\n│ Desktop │\n└─────────┘\n";sleep 0.5;printf "┌───────────┐\n│ Documents │\n└───────────┘\n";sleep 0.5;printf "┌────────────┐\n│\033[1;31m TOP SECRET \033[1;32m│\n└────────────┘\n";sleep 0.5;printf "┌──────────┐\n│ evidence │\n└──────────┘\n";sleep 0.5
 read -p "What folder do you want to go into? " FOL
 if [ "$FOL" == "Desktop" ];then echo Desktop;elif [ "$FOL" == "Documents" ];then echo Documents;elif [ "$FOL" == "TOP SECRET" ];then echo U HAX;elif [ "$FOL" == "evidence" ];then echo EVIDENCE IS BLOKD.;else echo Invalid Folder name.; fi
